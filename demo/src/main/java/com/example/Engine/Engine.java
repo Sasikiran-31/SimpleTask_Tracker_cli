@@ -48,18 +48,10 @@ public class Engine {
                 case "list" -> {
                     if(inputParts.length > 2) {
                         String showType = inputParts[2];
-                        System.out.println(ct.listTasks(showType));
+                        ct.listTasks(showType);
                     } else {
-                        System.out.println(ct.listTasks("all"));
+                        ct.listTasks("all");
                     }
-                    
-                    // if(inputParts.length > 1) {
-                    //     String showType = inputParts[2];
-                    //     // System.out.println(showType);
-
-                    // } else {
-                    //     System.out.println(ct.listTasks());
-                    // }
                 }
 
                 case "update" -> {

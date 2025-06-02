@@ -63,7 +63,6 @@ public class task {
 
     public JSONObject toJSONObject() {
         JSONObject json = new JSONObject();
-        json.put("ID", this.taskId);
         json.put("description", this.taskDescription);
         json.put("created", this.createdAt.toString());
         if(this.updatedAt!=null) {

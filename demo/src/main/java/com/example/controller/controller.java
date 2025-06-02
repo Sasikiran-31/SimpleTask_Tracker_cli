@@ -71,11 +71,10 @@ public class controller {
         }
     }
 
-    public JSONObject listTasks(String type){
+    public void listTasks(String type){
         JSONObject tasksJSON = new JSONObject();
         if(obj.isEmpty()) {
             System.out.println("No tasks to show, add them!");
-            return tasksJSON;
         } else if(type.equals("all")) {
             for(Map.Entry<Integer, task> e : obj.entrySet()) {
                 tasksJSON.put(String.valueOf(e.getKey()), e.getValue().toJSONObject());
@@ -87,12 +86,7 @@ public class controller {
                 }
             }
         }
-
-        // for(Map.Entry<Integer, task> entry : obj.entrySet()) {
-        //     tasksJSON.put(String.valueOf(entry.getKey()) , entry.getValue().toJSONObject());
-        // }
-
-        return tasksJSON;
+        System.out.println(tasksJSON.toString(4));
     }
 
     public void saveTasksToFile() {
