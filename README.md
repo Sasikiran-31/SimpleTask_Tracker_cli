@@ -1,4 +1,4 @@
-# Java Command-Line Task Manager
+# Task Tracker CLI
 
 This is a simple command-line task management application built in Java. It allows users to add, delete, list, update, and manage the status of tasks, with persistence to a JSON file.
 
